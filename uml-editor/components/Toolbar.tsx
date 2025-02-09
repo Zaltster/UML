@@ -22,13 +22,20 @@ export default function Toolbar() {
     };
 
     return (
-        <div className="bg-white p-4 rounded-lg shadow-lg">
+        <div className="bg-white p-4 rounded-lg shadow-lg space-y-2">
             <div
                 className="p-4 border-2 border-gray-300 rounded cursor-grab active:cursor-grabbing bg-white hover:bg-gray-50"
                 onDragStart={(e) => onDragStart(e, 'custom')}
                 draggable
             >
                 Drag to add node
+            </div>
+            <div
+                className="p-4 border-2 border-gray-300 rounded cursor-grab active:cursor-grabbing bg-white hover:bg-gray-50"
+                onDragStart={(e) => onDragStart(e, 'code')}
+                draggable
+            >
+                Drag to add code
             </div>
         </div>
     );
